@@ -6,5 +6,5 @@ import {Component, HostBinding} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @HostBinding() public hostClass: string = 'container-fluid';
+  @HostBinding('class') public hostClass: string = 'container-fluid';
 }
