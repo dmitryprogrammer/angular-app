@@ -1,5 +1,6 @@
 import {InjectionToken, NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
+import {HttpClientModule} from "@angular/common/http";
 import {BrowserModule} from "@angular/platform-browser";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
@@ -11,7 +12,7 @@ import {MENU} from "./core/constant/menu";
 export const MenuService = new InjectionToken<string>("MenuService");
 
 @NgModule({
-  imports: [BrowserModule, NgbModule, CommonModule, AppRoutingModule],
+  imports: [BrowserModule, NgbModule, CommonModule, HttpClientModule, AppRoutingModule],
   declarations: [AppComponent, MenuComponent],
   providers: [
     {
