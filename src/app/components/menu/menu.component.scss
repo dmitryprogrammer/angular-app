@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 :host {
   padding: 0;
@@ -16,7 +16,7 @@
   background-color: $menu-background-color;
   color: $white;
   margin: 10px 0;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 
   &:hover {
     background-color: darken($menu-background-color, 10%);

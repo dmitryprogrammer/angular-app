@@ -1,14 +1,14 @@
-import {InjectionToken, NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {InjectionToken, NgModule} from "@angular/core";
+import {CommonModule} from "@angular/common";
+import {BrowserModule} from "@angular/platform-browser";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './components/app/app.component';
-import {MenuComponent} from './components/menu/menu.component';
-import {MENU} from './common/constant/menu';
+import {AppRoutingModule} from "./app-routing.module";
+import {AppComponent} from "./components/app/app.component";
+import {MenuComponent} from "./components/menu/menu.component";
+import {MENU} from "./core/constant/menu";
 
-export const MenuService = new InjectionToken<string>('MenuService');
+export const MenuService = new InjectionToken<string>("MenuService");
 
 @NgModule({
   imports: [BrowserModule, NgbModule, CommonModule, AppRoutingModule],
