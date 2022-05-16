@@ -1,1 +1,7 @@
-<p>menu works!</p>
+<nav *ngIf='menuService'>
+  <ul class='nav flex-column'>
+    <li *ngFor='let menu of menuService; trackBy: trackByFn' class='nav-item'>
+      <a [routerLink]='menu.path' class='nav-link'>{{ menu.name }}</a>
+    </li>
+  </ul>
+</nav>

@@ -1,4 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+
+import {Menu} from '../../common/constant/menu';
+import {MenuService} from '../../app.module';
+import {trackByFn} from '../../common/utils/util';
 
 @Component({
   selector: 'app-menu',
@@ -6,9 +10,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  constructor() {
+  public trackByFn = trackByFn;
+
+  constructor(@Inject(MenuService) public menuService: Menu[]) {
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    console.log(this.menuService);
   }
 }
