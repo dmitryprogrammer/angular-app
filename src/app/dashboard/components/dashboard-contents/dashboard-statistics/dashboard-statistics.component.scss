@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.card-body {
+  display: flex;
+  flex-flow: row wrap;
+
+  @include desktop() {
+    justify-content: space-between;
+  }
+
+  @include tablet() {
+    flex-flow: column;
+  }
+}

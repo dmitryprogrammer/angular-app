@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    Statistics
+  </div>
+
+  <div class="card-body">
+    <app-dashboard-statistic-item [value]="postsLength$ | async"
+                                  [valueType]="DashboardItemTypes.POSTS"></app-dashboard-statistic-item>
+    <app-dashboard-statistic-item [value]="photosLength$ | async"
+                                  [valueType]="DashboardItemTypes.PHOTOS"></app-dashboard-statistic-item>
+    <app-dashboard-statistic-item [value]="albumsLength$ | async"
+                                  [valueType]="DashboardItemTypes.ALBUMS"></app-dashboard-statistic-item>
+  </div>
+</div>
