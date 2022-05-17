@@ -1,0 +1,20 @@
+.card-body {
+  max-height: 250px;
+  overflow: auto;
+}
+
+.latest-posts {
+  list-style: none;
+  padding: 0;
+}
+
+.latest-post {
+  margin-bottom: 20px;
+
+  &__title, &__body {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

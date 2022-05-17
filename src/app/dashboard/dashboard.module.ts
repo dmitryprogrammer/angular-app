@@ -10,10 +10,19 @@ import {
 import {
   DashboardStatisticItemComponent
 } from "./components/dashboard-contents/dashboard-statistics/dashboard-statistic-item/dashboard-statistic-item.component";
+import {
+  DashboardLatestPostsComponent
+} from "./components/dashboard-contents/dashboard-latest-posts/dashboard-latest-posts.component";
 
 @NgModule({
   imports: [CommonModule, DashboardRoutingModule],
-  declarations: [DashboardComponent, DashboardHeaderComponent, DashboardStatisticsComponent, DashboardStatisticItemComponent]
+  declarations: [
+    DashboardComponent,
+    DashboardHeaderComponent,
+    DashboardStatisticsComponent,
+    DashboardStatisticItemComponent,
+    DashboardLatestPostsComponent
+  ]
 })
 export class DashboardModule {
 }
