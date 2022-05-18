@@ -1,5 +1,14 @@
-<h1>Posts</h1>
 <app-breadcrumbs></app-breadcrumbs>
+
+<h1>Posts</h1>
+
+<form [formGroup]="form">
+  <div class="row">
+    <div class="col-xl-2 col-lg-4 col-md-4">
+      <input type="text" class="form-control" formControlName="title" placeholder="Title" id="userId" />
+    </div>
+  </div>
+</form>
 
 <table class="table">
   <thead>
@@ -10,12 +19,16 @@
     <th scope="col">Content</th>
   </tr>
   </thead>
-  <tbody>
-  <tr *ngFor="let post of posts$ | async; trackBy: trackByFn">
-    <td>{{post.id}}</td>
-    <td><a [routerLink]="['/', 'posts', post.id]">User {{post.userId}}</a></td>
-    <td><a [routerLink]="['/', 'posts', post.id]">{{post.title}}</a></td>
-    <td>{{post.body}}</td>
+  <tbody *ngIf="posts.length">
+  <tr *ngFor="let post of posts; trackBy: trackByFn">
+    <td>{{ post.id }}</td>
+    <td>
+      <a [routerLink]="['/', 'posts', post.id]">User {{ post.userId }}</a>
+    </td>
+    <td>
+      <a [routerLink]="['/', 'posts', post.id]">{{ post.title }}</a>
+    </td>
+    <td>{{ post.body }}</td>
   </tr>
   </tbody>
 </table>
