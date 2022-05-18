@@ -1,0 +1,7 @@
+@import "mixins";
+
+.dashboard-content-block-body {
+  @include mobile() {
+    margin-bottom: 20px;
+  }
+}

@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, HostBinding} from "@angular/core";
 import {Observable} from "rxjs";
 
 import {Posts} from "../../../../core/models/posts.models";
@@ -11,6 +11,7 @@ import {trackByFn} from "../../../../core/utils/util";
   styleUrls: ["./dashboard-latest-posts.component.scss"]
 })
 export class DashboardLatestPostsComponent {
+  @HostBinding("class") public hostClass: string = "dashboard-content-block-body";
   public posts$: Observable<Posts> = this.postsService.getPosts();
 
   constructor(private postsService: PostsService) {

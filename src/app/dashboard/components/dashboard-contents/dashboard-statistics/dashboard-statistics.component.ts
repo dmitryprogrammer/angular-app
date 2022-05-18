@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, HostBinding} from "@angular/core";
 import {Observable} from "rxjs";
 
 import {PostsService} from "../../../../core/services/posts.service";
@@ -17,6 +17,7 @@ export enum DashboardItemTypes {
   styleUrls: ["./dashboard-statistics.component.scss"]
 })
 export class DashboardStatisticsComponent {
+  @HostBinding("class") public hostClass: string = "dashboard-content-block-body";
   public DashboardItemTypes = DashboardItemTypes;
   public postsLength$: Observable<number> = this.postsService.getPostsLength();
   public photosLength$: Observable<number> = this.photoService.getPhotosLength();
