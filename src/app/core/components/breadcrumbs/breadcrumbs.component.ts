@@ -23,7 +23,7 @@ export class BreadcrumbsComponent implements OnInit, OnDestroy {
     this.unsubscribeSubject$.complete();
   }
 
-  public generateRouterLink(path: string): string[] {
-    return ["/"].concat(this.pathsList);
+  public generateRouterLink(index: number): string[] {
+    return ["/"].concat(this.pathsList.slice(0, index + 1));
   }
 }

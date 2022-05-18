@@ -3,7 +3,7 @@
     <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
     <ng-container *ngIf="pathsList.length">
       <li *ngFor="let path of pathsList; let index = index;" class="breadcrumb-item">
-        <a [routerLink]="generateRouterLink(path)">{{ path }}</a>
+        <a [routerLink]="generateRouterLink(index)">{{ path }}</a>
       </li>
     </ng-container>
   </ol>
