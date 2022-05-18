@@ -1,14 +1,12 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
-import {Subject} from "rxjs";
 
 @Component({
   selector: "app-breadcrumbs",
   templateUrl: "./breadcrumbs.component.html",
   styleUrls: ["./breadcrumbs.component.scss"]
 })
-export class BreadcrumbsComponent implements OnInit, OnDestroy {
-  private unsubscribeSubject$: Subject<null> = new Subject<null>();
+export class BreadcrumbsComponent implements OnInit {
   public pathsList: string[] = [];
 
   constructor(private router: Router) {
@@ -16,11 +14,6 @@ export class BreadcrumbsComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.pathsList = this.router.url.split("/").slice(1);
-  }
-
-  public ngOnDestroy(): void {
-    this.unsubscribeSubject$.next(null);
-    this.unsubscribeSubject$.complete();
   }
 
   public generateRouterLink(index: number): string[] {
