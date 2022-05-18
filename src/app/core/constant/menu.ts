@@ -15,9 +15,5 @@ export const MENU: Menu[] = [
   {
     path: "albums",
     name: "Albums"
-  },
-  {
-    path: "photos",
-    name: "Photos"
   }
 ];

@@ -9,8 +9,7 @@ describe("AlbumsListComponent", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AlbumsListComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +20,9 @@ describe("AlbumsListComponent", () => {
 
   it("should create", () => {
     expect(component).toBeTruthy();
+  });
+
+  it("albums property default value is empty array", () => {
+    expect(component.albums).toEqual([]);
   });
 });
