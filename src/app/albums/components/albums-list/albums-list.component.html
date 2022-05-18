@@ -1,0 +1,25 @@
+<app-breadcrumbs></app-breadcrumbs>
+
+<h1>Albums</h1>
+
+<form [formGroup]="form" class="albums-list__form">
+  <div class="row">
+    <div class="col-xl-2 col-lg-4 col-md-4">
+      <input type="text" class="form-control" formControlName="title" placeholder="Title" id="albumTitle" />
+    </div>
+  </div>
+</form>
+
+<div *ngIf="albums" class="albums-list row">
+  <div *ngFor="let album of albums; trackBy: trackBy" class="col-xl-3 col-lg-6 col-md-12">
+    <div class="card album">
+      <div class="card-title">{{ album.title }}</div>
+      <div class="card-body photos">
+        <div *ngFor="let photo of album.photos; trackBy: trackBy">
+          <img [src]="photo.thumbnailUrl" [alt]="photo.title" class="photo" />
+        </div>
+      </div>
+      <div class="card-text">By User {{ album.userId }}</div>
+    </div>
+  </div>
+</div>

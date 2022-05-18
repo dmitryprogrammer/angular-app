@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  padding: 35px 0;
+}
+
+.albums-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.album {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.photos {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.photo {
+  $size: 50px;
+  width: $size;
+  height: $size;
+}
+
+.albums-list {
+  &__form {
+    margin-bottom: 30px;
+  }
+}
