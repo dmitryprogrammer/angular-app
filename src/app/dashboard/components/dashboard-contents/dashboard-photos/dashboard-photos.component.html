@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">
+    Recent Photos
+  </div>
+
+  <div class="card-body" *ngIf="photos$ | async as photos">
+    <div *ngFor="let photo of photos; trackBy: trackBy" class="dashboard-photo-container">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title" class="dashboard-photo-container__photo" />
+      <p class="dashboard-photo-container__text">{{photo.title}}</p>
+    </div>
+  </div>
+</div>

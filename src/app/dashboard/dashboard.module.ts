@@ -13,6 +13,7 @@ import {
 import {
   DashboardLatestPostsComponent
 } from "./components/dashboard-contents/dashboard-latest-posts/dashboard-latest-posts.component";
+import {DashboardPhotosComponent} from "./components/dashboard-contents/dashboard-photos/dashboard-photos.component";
 
 @NgModule({
   imports: [CommonModule, DashboardRoutingModule],
@@ -21,7 +22,8 @@ import {
     DashboardHeaderComponent,
     DashboardStatisticsComponent,
     DashboardStatisticItemComponent,
-    DashboardLatestPostsComponent
+    DashboardLatestPostsComponent,
+    DashboardPhotosComponent
   ]
 })
 export class DashboardModule {

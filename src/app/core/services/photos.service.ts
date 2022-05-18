@@ -2,8 +2,8 @@ import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable, pluck} from "rxjs";
 
-import {Posts} from "../models/posts.models";
 import {DOMAIN_URL} from "./common-data";
+import {Photos} from "../models/photos.models";
 
 @Injectable({
   providedIn: "root"
@@ -14,8 +14,8 @@ export class PhotosService {
   constructor(private http: HttpClient) {
   }
 
-  public getPhotos(): Observable<Posts> {
-    return this.http.get(this.url) as Observable<Posts>;
+  public getPhotos(): Observable<Photos> {
+    return this.http.get(this.url) as Observable<Photos>;
   }
 
   public getPhotosLength(): Observable<number> {

@@ -1,0 +1,20 @@
+.card-body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 10px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.dashboard-photo-container {
+  $size: 140px;
+  width: $size;
+  margin-bottom: 20px;
+
+  &__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
