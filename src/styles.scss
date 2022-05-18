@@ -2,7 +2,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-@import "src/assets/styles/components";
+@import 'src/assets/styles/components';
 
 html,
 body {
@@ -11,8 +11,8 @@ body {
 
 body {
   min-height: 100%;
-}
 
-* {
-  white-space: pre-line;
+  * {
+    white-space: pre-line;
+  }
 }
