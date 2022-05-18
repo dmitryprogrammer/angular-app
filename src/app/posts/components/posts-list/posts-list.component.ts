@@ -37,7 +37,7 @@ export class PostsListComponent implements OnInit, OnDestroy {
       )
       .subscribe(({title}: {title: string; type: string}) => {
         const valueTitle = title.toLowerCase().trim();
-        this.posts = title ? this.posts.filter(({title: postTitle}: Post) => postTitle.includes(valueTitle)) : this.initialPosts;
+        this.posts = title ? this.initialPosts.filter(({title: postTitle}: Post) => postTitle.includes(valueTitle)) : this.initialPosts;
       });
   }
 

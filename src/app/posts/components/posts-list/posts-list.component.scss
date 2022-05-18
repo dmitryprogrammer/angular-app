@@ -2,3 +2,9 @@
   display: block;
   padding: 35px 0;
 }
+
+.posts-list {
+  &__form {
+    margin-bottom: 30px;
+  }
+}
