@@ -6,11 +6,11 @@
   <div class="row photos-container">
     <div *ngFor="let photo of albumPhotos$ | async" class="col-xl-3 col-lg-6 col-md-12">
       <div class="card photo-item">
-        <div class="card-title">{{ photo.title }}</div>
+        <div class="card-header">{{ photo.title }}</div>
         <div class="card-body">
           <img [src]="photo.url" [alt]="photo.title" class="photo" />
         </div>
-        <div class="card-text">By User {{ album.userId }}</div>
+        <a class="card-text" [routerLink]="['/', 'user', album.userId]">By User {{ album.userId }}</a>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import {Component, HostBinding, OnDestroy, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {filter, Subject, switchMap, takeUntil} from "rxjs";
 
@@ -14,6 +14,7 @@ import {trackByFn} from "../../../core/utils/util";
   styleUrls: ["./albums-list.component.scss"]
 })
 export class AlbumsListComponent implements OnInit, OnDestroy {
+  @HostBinding("class") public hostClass: string = "host-container";
   private unsubscribeSubject$: Subject<null> = new Subject<null>();
   public initialAlbums: Albums = [];
   public albums: Albums = [];

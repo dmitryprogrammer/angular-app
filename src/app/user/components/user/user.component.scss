@@ -1,0 +1,35 @@
+@import 'variables';
+
+.user-card {
+  &__header {
+    padding: 60px;
+    background-color: #0081c0;
+    margin-bottom: 40px;
+    color: $white;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    .card-body {
+      max-height: 500px;
+      overflow: auto;
+    }
+  }
+
+  &__posts-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__post {
+    margin-bottom: 15px;
+  }
+
+  &__post-text {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

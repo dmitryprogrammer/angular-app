@@ -1,0 +1,35 @@
+<ng-container *ngIf="user$ | async as user">
+  <div class="user-card__header">
+    <h1>{{ user.name }}</h1>
+    <p>{{ user.username }} - {{ user.email }} - {{ user.website }} - {{ user.company.name }}
+      - {{ user.address.city }}</p>
+  </div>
+
+  <div class="user-card__content row">
+    <div class="user-card__item col-lg-6 col-md-12">
+      <div class="card">
+        <div class="card-header">Albums</div>
+        <div class="card-body">
+          <ul *ngIf="albums$ | async as albums" class="user-card__posts-list">
+            <li *ngFor="let album of albums" class="user-card__post">
+              <a [routerLink]="['/', 'albums', album.id]" class="user-card__post-title">{{ album.title }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="user-card__item col-lg-6 col-md-12">
+      <div class="card">
+        <div class="card-header">Posts</div>
+        <div class="card-body">
+          <ul *ngIf="posts$ | async as posts" class="user-card__posts-list">
+            <li *ngFor="let post of posts" class="user-card__post">
+              <a [routerLink]="['/', 'posts', post.id]" class="user-card__post-text">{{ post.title }}</a>
+              <span class="user-card__post-text">{{ post.body }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

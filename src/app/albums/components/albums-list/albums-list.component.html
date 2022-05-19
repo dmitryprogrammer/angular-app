@@ -13,13 +13,13 @@
 <div *ngIf="albums" class="albums-list row">
   <div *ngFor="let album of albums; trackBy: trackBy" class="col-xl-3 col-lg-6 col-md-12">
     <div class="card album">
-      <a [routerLink]="[album.id]" class="card-title">{{ album.title }}</a>
+      <a [routerLink]="[album.id]" class="card-header">{{ album.title }}</a>
       <div class="card-body photos">
         <div *ngFor="let photo of album.photos; trackBy: trackBy">
           <img [src]="photo.thumbnailUrl" [alt]="photo.title" class="photo" />
         </div>
       </div>
-      <div class="card-text">By User {{ album.userId }}</div>
+      <a class="card-text" [routerLink]="['/', 'user', album.userId]">By User {{ album.userId }}</a>
     </div>
   </div>
 </div>

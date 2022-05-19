@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import {Component, HostBinding, OnDestroy, OnInit} from "@angular/core";
 import {filter, Observable, Subject, takeUntil} from "rxjs";
 
 import {Post, Posts} from "../../../core/models/posts.models";
@@ -12,6 +12,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
   styleUrls: ["./posts-list.component.scss"]
 })
 export class PostsListComponent implements OnInit, OnDestroy {
+  @HostBinding("class") public hostClass: string = "host-container";
   private unsubscribeSubject$: Subject<null> = new Subject<null>();
   private posts$: Observable<Posts> = this.postsService.getPosts();
   private initialPosts: Posts = [];

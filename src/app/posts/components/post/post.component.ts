@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import {Component, HostBinding, OnDestroy, OnInit} from "@angular/core";
 import {ActivatedRoute, UrlSegment} from "@angular/router";
 import {filter, map, pluck, Subject, switchMap, takeUntil, tap} from "rxjs";
 
@@ -11,6 +11,7 @@ import {Post} from "../../../core/models/posts.models";
   styleUrls: ["./post.component.scss"]
 })
 export class PostComponent implements OnInit, OnDestroy {
+  @HostBinding("class") public hostClass: string = "host-container";
   private unsubscribeSubject: Subject<null> = new Subject<null>();
   public postId: number;
   public post: Post;

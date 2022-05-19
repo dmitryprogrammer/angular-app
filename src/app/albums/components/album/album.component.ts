@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, HostBinding, OnInit} from "@angular/core";
 import {ActivatedRoute, UrlSegment} from "@angular/router";
 import {filter, map, Observable, switchMap} from "rxjs";
 
@@ -13,6 +13,7 @@ import {PhotosService} from "../../../core/services/photos.service";
   styleUrls: ["./album.component.scss"]
 })
 export class AlbumComponent implements OnInit {
+  @HostBinding("class") public hostClass: string = "host-container";
   public album$: Observable<Album>;
   public albumPhotos$: Observable<Photos>;
 

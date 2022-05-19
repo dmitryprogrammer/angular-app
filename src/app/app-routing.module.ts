@@ -6,8 +6,8 @@ import {DashboardModule} from "./dashboard/dashboard.module";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "dashboard",
-    pathMatch: "full"
+    pathMatch: "full",
+    redirectTo: "dashboard"
   },
   {
     path: "dashboard",
@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: "albums",
     loadChildren: () => import("./albums/albums.module").then(({AlbumsModule}) => AlbumsModule)
+  },
+  {
+    path: "user",
+    loadChildren: () => import("./user/user.module").then(({UserModule}) => UserModule)
   }
 ];
 

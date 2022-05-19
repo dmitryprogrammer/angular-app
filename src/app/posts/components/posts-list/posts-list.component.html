@@ -23,7 +23,7 @@
   <tr *ngFor="let post of posts; trackBy: trackByFn">
     <td>{{ post.id }}</td>
     <td>
-      <a [routerLink]="[post.id]">User {{ post.userId }}</a>
+      <a [routerLink]="['../', 'user', post.userId]">User {{ post.userId }}</a>
     </td>
     <td>
       <a [routerLink]="[post.id]">{{ post.title }}</a>
