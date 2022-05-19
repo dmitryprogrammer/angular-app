@@ -1,6 +1,9 @@
 import {ComponentFixture, TestBed} from "@angular/core/testing";
+import {FormBuilder} from "@angular/forms";
 
 import {AlbumsListComponent} from "./albums-list.component";
+import {AlbumsService} from "../../../core/services/albums.service";
+import {PhotosService} from "../../../core/services/photos.service";
 
 describe("AlbumsListComponent", () => {
   let component: AlbumsListComponent;
@@ -8,7 +11,8 @@ describe("AlbumsListComponent", () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AlbumsListComponent]
+      declarations: [AlbumsListComponent],
+      providers: [FormBuilder, AlbumsService, PhotosService]
     }).compileComponents();
   });
 
